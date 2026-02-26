@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<?import javafx.scene.layout.StackPane?>
+<BorderPane xmlns:fx="http://javafx.com/fxml" fx:id="mainPanel" prefWidth="600" prefHeight="400">
+    <!-- Add margin around the whole layout -->
+    <padding>
+        <Insets top="15" right="15" bottom="15" left="15"/>
+    </padding>
+
+    <!-- Top area for the score label -->
+    <top>
+        <Label fx:id="score" text="Score: 0" BorderPane.alignment="CENTER" />
+    </top>
+
+    <!-- Center area for the game board (you can style this Pane as needed) -->
+    <center>
+        <Pane fx:id="boardPane" />
+    </center>
+</BorderPane>
