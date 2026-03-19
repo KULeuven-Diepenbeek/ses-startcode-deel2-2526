@@ -113,4 +113,19 @@ public class CandyCrushGame {
         // TODO
         return null;
     }
+
+    // kopieer naar CandyCrushGame.java
+    private boolean leadsToMatch(Switch sw) {
+        doSwitch(sw);
+        var result = !findAllMatches().isEmpty();
+        doSwitch(sw);
+        return result;
+    }
+
+    private void doSwitch(Switch sw) {
+        var firstCandy = getCandyAt(sw.first());
+        var secondCandy = getCandyAt(sw.second());
+        setCandyAt(sw.first(), secondCandy);
+        setCandyAt(sw.second(), firstCandy);
+    }
 }
