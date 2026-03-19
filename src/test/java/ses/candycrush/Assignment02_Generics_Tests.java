@@ -59,8 +59,8 @@ public class Assignment02_Generics_Tests {
         var size = new BoardSize(10, 20);
         var board = new Board<Candy>(size);
         Function<Position, Candy> fillFunction = (pos) -> switch(pos) {
-            case Position(var row, var col) when row % 2 == 0 -> Candy.NormalCandy(1);
-            default -> Candy.NormalCandy(0);
+            case Position(var row, var _, var _) when row % 2 == 0 -> new Candy.NormalCandy(1);
+            default -> new Candy.NormalCandy(0);
         };
         board.fill(fillFunction);
         for (var pos : size.positions()) {
